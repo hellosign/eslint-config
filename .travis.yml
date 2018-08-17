@@ -1,7 +1,7 @@
 language: node_js
 node_js:
-  - 'node'
-  - 'lts/*'
+  - "node"
+  - "lts/*"
 deploy:
   - provider: npm
     email: "api@hellosign.com"

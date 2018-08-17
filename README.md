@@ -24,11 +24,11 @@ In your ESLint configuration (probably an `.eslintrc` file), add:
 
 ### Atom
 
-Install [`linter-eslint`](https://atom.io/packages/linter-eslint). To fix files automatically, bring up the command palette (<kbd>⬆</kbd> + <kbd>⌘</kbd> + <kbd>p</kbd>) and choose `Linter Eslint: Fix File`.
+Install [`linter-eslint`](https://atom.io/packages/linter-eslint). To fix files automatically, bring up the command palette (<kbd>shift</kbd><kbd>cmd</kbd><kbd>p</kbd>) and choose `Linter Eslint: Fix File`.
 
 ### Sublime Text 3
 
-Install [`SublimeLinter-eslint`](https://github.com/roadhump/SublimeLinter-eslint) and [`ESLint-Formatter`](https://github.com/TheSavior/ESLint-Formatter). To fix files automatically, use the shortcut <kbd>⬆</kbd> + <kbd>⌘</kbd> + <kbd>h</kbd>, or choose `ESLint Formatter: Format this file` from the command palette.
+Install [`SublimeLinter-eslint`](https://github.com/roadhump/SublimeLinter-eslint) and [`ESLint-Formatter`](https://github.com/TheSavior/ESLint-Formatter). To fix files automatically, use the shortcut <kbd>shift</kbd><kbd>cmd</kbd><kbd>h</kbd>, or choose `ESLint Formatter: Format this file` from the command palette.
 
 ### Others
 
