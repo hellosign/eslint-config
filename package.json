@@ -1,11 +1,11 @@
 {
   "name": "@hellosign/eslint-config",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "ESLint shareable config by HelloSign",
   "main": "index.js",
   "author": "HelloSign",
   "license": "ISC",
-  "homepage": "https://github.com/hellosign/eslint-config#readme",
+  "homepage": "https://github.com/hellosign/javascript",
   "scripts": {
     "test": "jest"
   },

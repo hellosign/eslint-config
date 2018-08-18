@@ -1,8 +1,8 @@
 # @hellosign/eslint-config [![Build Status](https://travis-ci.org/hellosign/eslint-config.svg?branch=master)](https://travis-ci.org/hellosign/eslint-config)
 
-> ESLint [shareable config](http://eslint.org/docs/developer-guide/shareable-configs.html) by [HelloSign](https://www.hellosign.com).
+ESLint [shareable config](http://eslint.org/docs/developer-guide/shareable-configs.html) by [HelloSign](https://www.hellosign.com).
 
-This config extends Airbnb's `eslint-config-airbnb-base` with a few overrides. We mostly follow their [JavaScript Style Guide](https://github.com/airbnb/javascript/).
+This config extends [AirBnB's `eslint-config-airbnb-base`](https://www.npmjs.com/package/eslint-config-airbnb-base) with a few minor exceptions.
 
 ## Install
 
@@ -12,7 +12,7 @@ npm install --save-dev eslint @hellosign/eslint-config
 
 ## Usage
 
-In your ESLint configuration (probably an `.eslintrc` file), add:
+In your ESLint configuration add:
 
 ```json
 {
@@ -20,16 +20,17 @@ In your ESLint configuration (probably an `.eslintrc` file), add:
 }
 ```
 
-## Editor Integrations
+If you'd like to apply custom rules which override our default config, simply add them to `rules`.
 
-### Atom
+```json
+{
+  "extends": "@hellosign",
+  "rules": {
+    "comma-dangle": ["error", "never"]
+  }
+}
+```
 
-Install [`linter-eslint`](https://atom.io/packages/linter-eslint). To fix files automatically, bring up the command palette (<kbd>shift</kbd><kbd>cmd</kbd><kbd>p</kbd>) and choose `Linter Eslint: Fix File`.
+## Integrations
 
-### Sublime Text 3
-
-Install [`SublimeLinter-eslint`](https://github.com/roadhump/SublimeLinter-eslint) and [`ESLint-Formatter`](https://github.com/TheSavior/ESLint-Formatter). To fix files automatically, use the shortcut <kbd>shift</kbd><kbd>cmd</kbd><kbd>h</kbd>, or choose `ESLint Formatter: Format this file` from the command palette.
-
-### Others
-
-For other integrations, see ESLint's [list](http://eslint.org/docs/user-guide/integrations).
+To integrate ESLint into your editor, check out [ESLint's integrations user guide](https://eslint.org/docs/user-guide/integrations).
