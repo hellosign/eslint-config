@@ -5,7 +5,7 @@
   "main": "index.js",
   "author": "HelloSign",
   "license": "ISC",
-  "homepage": "https://github.com/hellosign/eslint-config#readme",
+  "homepage": "https://github.com/hellosign/javascript",
   "scripts": {
     "test": "jest"
   },
