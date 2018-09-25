@@ -34,3 +34,8 @@ If you'd like to apply custom rules which override our default config, simply ad
 ## Integrations
 
 To integrate ESLint into your editor, check out [ESLint's integrations user guide](https://eslint.org/docs/user-guide/integrations).
+
+<br/>
+<br/>
+<hr/>
+&copy; 2018 [HelloSign](https://hellosign.com). All rights reserved.
