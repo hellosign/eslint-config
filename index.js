@@ -1,5 +1,20 @@
 module.exports = {
-  extends: 'airbnb-base',
+  extends: [
+    'airbnb-base',
+    // eslint can't find undefined components without this
+    // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-no-undef.md
+    'plugin:react/recommended',
+  ],
+  settings: {
+    react: {
+      version: '15.0', // React version, default to the latest React stable release
+    },
+  },
+  parserOptions: {
+    ecmaFeatures: {
+      jsx: true,
+    },
+  },
   env: {
     node: true,
     browser: true,
@@ -17,6 +32,14 @@ module.exports = {
     //
     // https://eslint.org/docs/rules/no-foo
     // 'no-foo': 'off',
+
+
+    // Using skipUndeclared, this will yell about missing props for anything
+    // that has propTypes, but won't yell at older components that don't have
+    // any propTypes.
+    //
+    // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/prop-types.md
+    'react/prop-types': ['error', { skipUndeclared: true }],
 
     // We're not going to worry about this too much. Arrow
     // body style can really depend on what's best for a

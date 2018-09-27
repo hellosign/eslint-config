@@ -2,8 +2,11 @@ const eslint = require('eslint');
 
 const config = require('./index');
 
-test('Extends airbnb-base', () => {
-  expect(config.extends).toBe('airbnb-base');
+test('Extends airbnb-base and the react plugin', () => {
+  expect(config.extends).toEqual([
+    'airbnb-base',
+    'plugin:react/recommended',
+  ]);
 });
 
 test('Exports rules', () => {
