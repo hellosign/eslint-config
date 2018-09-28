@@ -34,9 +34,9 @@ module.exports = {
     // 'no-foo': 'off',
 
 
-    // Using skipUndeclared, this will yell about missing props for anything
-    // that has propTypes, but won't yell at older components that don't have
-    // any propTypes.
+    // Using skipUndeclared, this will yell about missing
+    // props for anything that has propTypes, but won't yell
+    // at older components that don't have any propTypes.
     //
     // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/prop-types.md
     'react/prop-types': ['error', { skipUndeclared: true }],
