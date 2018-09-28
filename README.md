@@ -38,4 +38,5 @@ To integrate ESLint into your editor, check out [ESLint's integrations user guid
 <br/>
 <br/>
 <hr/>
+
 &copy; 2018 [HelloSign](https://hellosign.com). All rights reserved.
