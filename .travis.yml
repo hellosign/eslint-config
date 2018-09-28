@@ -4,7 +4,7 @@ node_js:
   - "lts/*"
 deploy:
   - provider: npm
-    email: "api@hellosign.com"
+    email: "apisupport@hellosign.com"
     api_key: $NPM_API_KEY
     on:
       branch: master
