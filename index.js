@@ -33,6 +33,48 @@ module.exports = {
     // https://eslint.org/docs/rules/no-foo
     // 'no-foo': 'off',
 
+    // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-indent.md
+    'react/jsx-indent': ['error', 2],
+
+    // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-indent-props.md
+    'react/jsx-indent-props': ['error', 2],
+
+
+    // It's easy to miss the end of a multiline component that has props and
+    // children
+    //
+    // <li
+    //   className="template-modal__template-item"
+    //   key={t.id}
+    //   onClick={this.selectTemplate(t)} >
+    //   {t.name}
+    //
+    // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-closing-bracket-location.md
+    'react/jsx-closing-bracket-location': ['error', {
+      nonEmpty: 'line-aligned',
+      selfClosing: 'after-props',
+    }],
+
+    // This rule prevents these:
+    // <Hello>
+    //   marklar</Hello>
+    //
+    // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-closing-tag-location.md
+    'react/jsx-closing-tag-location': ['error'],
+
+    // This works along with 'react/jsx-closing-bracket-location' so we get
+    // some spacing on `<Components someProp="foo" />`
+    //
+    // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-tag-spacing.md
+    'react/jsx-tag-spacing': ['error', {
+      // forbid <Component/ >
+      closingSlash: 'never',
+      // require <Component />
+      beforeSelfClosing: 'always',
+      // forbid < Component/> WHY DOES THIS EXIST?!
+      afterOpening: 'never',
+      beforeClosing: 'allow',
+    }],
 
     // Using skipUndeclared, this will yell about missing
     // props for anything that has propTypes, but won't yell
