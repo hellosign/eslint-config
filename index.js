@@ -55,13 +55,6 @@ module.exports = {
       selfClosing: 'after-props',
     }],
 
-    // This rule prevents these:
-    // <Hello>
-    //   marklar</Hello>
-    //
-    // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-closing-tag-location.md
-    'react/jsx-closing-tag-location': ['error'],
-
     // This works along with 'react/jsx-closing-bracket-location' so we get
     // some spacing on `<Components someProp="foo" />`
     //
