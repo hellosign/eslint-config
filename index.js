@@ -5,6 +5,9 @@ module.exports = {
     // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-no-undef.md
     'plugin:react/recommended',
   ],
+  plugins: [
+    'babel',
+  ],
   settings: {
     react: {
       version: '15.0', // React version, default to the latest React stable release
@@ -32,6 +35,12 @@ module.exports = {
     //
     // https://eslint.org/docs/rules/no-foo
     // 'no-foo': 'off',
+
+    // Includes semis on class properties.
+    //
+    // https://github.com/babel/eslint-plugin-babel
+    'babel/semi': 1,
+
 
     // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-indent.md
     'react/jsx-indent': ['error', 2],
