@@ -1,13 +1,18 @@
 module.exports = {
   extends: [
     'airbnb-base',
-    // eslint can't find undefined components without this
+    // ESLint won't be able to find undefined components
+    // without this.
+    //
     // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-no-undef.md
     'plugin:react/recommended',
   ],
+  plugins: [
+    'babel',
+  ],
   settings: {
     react: {
-      version: '15.0', // React version, default to the latest React stable release
+      version: '15.0',
     },
   },
   parserOptions: {
@@ -24,7 +29,9 @@ module.exports = {
     //
     // A list of available ESLint rules can be found here:
     // https://eslint.org/docs/rules/. Amendments must be
-    // accompanied by a comment justifying the decision.
+    // in alphabetical order and accompanied by a comment
+    // justifying the decision and a link to the rule or
+    // relevant information, if applicable.
 
     // This is an example rule amendment. We actually prefer
     // to use "foo" because it makes such and such easier
@@ -32,14 +39,6 @@ module.exports = {
     //
     // https://eslint.org/docs/rules/no-foo
     // 'no-foo': 'off',
-
-
-    // Using skipUndeclared, this will yell about missing
-    // props for anything that has propTypes, but won't yell
-    // at older components that don't have any propTypes.
-    //
-    // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/prop-types.md
-    'react/prop-types': ['error', { skipUndeclared: true }],
 
     // We're not going to worry about this too much. Arrow
     // body style can really depend on what's best for a
@@ -55,6 +54,11 @@ module.exports = {
     //
     // https://eslint.org/docs/rules/arrow-parens#always
     'arrow-parens': ['error', 'always'],
+
+    // Requires semicolons for class properties.
+    //
+    // https://github.com/babel/eslint-plugin-babel
+    'babel/semi': 1,
 
     // This makes class inheritance annoying sometimes. If
     // for example we want to create an abstract method
@@ -121,5 +125,49 @@ module.exports = {
     //
     // https://eslint.org/docs/rules/prefer-destructuring
     'prefer-destructuring': 'off',
+
+    // It's easy to miss the end of a multiline component
+    // that has props and children.
+    //
+    // Example:
+    //
+    //   <li
+    //     className="foo"
+    //     key={item.id}
+    //     onClick={this.handleItemClick(item)}>
+    //     {item.name}
+    //
+    // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-closing-bracket-location.md
+    'react/jsx-closing-bracket-location': ['error', {
+      nonEmpty: 'line-aligned',
+      selfClosing: 'after-props',
+    }],
+
+    // Requires two spaces when indenting JSX.
+    //
+    // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-indent.md
+    'react/jsx-indent': ['error', 2],
+
+    // Requires that JSX props be indented.
+    //
+    // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-indent-props.md
+    'react/jsx-indent-props': ['error', 2],
+
+    // Forbids erroneous tag spacing.
+    //
+    // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-tag-spacing.md
+    'react/jsx-tag-spacing': ['error', {
+      closingSlash: 'never', // forbid <Component/ >
+      beforeSelfClosing: 'always', // require <Component />
+      afterOpening: 'never', // forbid < Component/>
+      beforeClosing: 'allow',
+    }],
+
+    // Using skipUndeclared, this will yell about missing
+    // props for anything that has propTypes, but won't yell
+    // at older components that don't have any propTypes.
+    //
+    // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/prop-types.md
+    'react/prop-types': ['error', { skipUndeclared: true }],
   },
 };
