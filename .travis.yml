@@ -4,7 +4,10 @@ node_js:
   - "lts/*"
 deploy:
   - provider: npm
-    email: "apisupport@hellosign.com"
+    skip_cleanup: true
+    email: $NPM_EMAIL_ADDRESS
     api_key: $NPM_API_KEY
+    tag: latest
     on:
-      branch: master
+      tags: true
+      condition: $TRAVIS_TAG =~ ^v[0-9]+\.[0-9]+\.[0-9]+$
